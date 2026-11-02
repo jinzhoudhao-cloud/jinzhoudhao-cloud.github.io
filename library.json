@@ -1,1 +1,82 @@
-{"version":1,"resources":[{"id":"bilibili-profile","category":"videos","type":"link","title":{"en":"Jinzhou on Bilibili","zh":"金洲的 B 站主页"},"description":{"en":"Visit my Bilibili channel for videos and updates.","zh":"前往我的哔哩哔哩主页，查看视频与动态。"},"url":"https://space.bilibili.com/10249844","tags":{"en":["Video","Bilibili","Channel"],"zh":["视频","哔哩哔哩","B站","频道"]}},{"id":"cyb115-lab-index","category":"cybersecurity","type":"document","title":{"en":"CYB 115 Lab Index & Command Reference","zh":"CYB 115 实验目录与命令参考"},"description":{"en":"74 lab entries covering Windows, Linux, networking, permissions, encryption and Wireshark. Read online or download the original Word document.","zh":"74 个实验条目，涵盖 Windows、Linux、网络、权限、加密与 Wireshark。支持在线阅读及下载原始 Word 文档。"},"download":"resources/CYB115_Lab_Index.docx","preview":"resources/cyb115-lab-index.json","tags":{"en":["Cybersecurity","Lab","Commands","Windows","Linux","Network security","Document"],"zh":["网络安全","实验","命令","操作系统","文档","资料"]}}],"tracks":[]}
+{
+  "version": 1,
+  "resources": [
+    {
+      "id": "bilibili-profile",
+      "category": "videos",
+      "type": "link",
+      "title": {
+        "en": "Jinzhou on Bilibili",
+        "zh": "金洲的 B 站主页"
+      },
+      "description": {
+        "en": "Visit my Bilibili channel for videos and updates.",
+        "zh": "前往我的哔哩哔哩主页，查看视频与动态。"
+      },
+      "url": "https://space.bilibili.com/10249844",
+      "tags": {
+        "en": [
+          "Video",
+          "Bilibili",
+          "Channel"
+        ],
+        "zh": [
+          "视频",
+          "哔哩哔哩",
+          "B站",
+          "频道"
+        ]
+      }
+    },
+    {
+      "id": "cyb115-lab-index",
+      "category": "cybersecurity",
+      "type": "document",
+      "title": {
+        "en": "CYB 115 Lab Index & Command Reference",
+        "zh": "CYB 115 实验目录与命令参考"
+      },
+      "description": {
+        "en": "74 lab entries covering Windows, Linux, networking, permissions, encryption and Wireshark. Read online or download the original Word document.",
+        "zh": "74 个实验条目，涵盖 Windows、Linux、网络、权限、加密与 Wireshark。支持在线阅读及下载原始 Word 文档。"
+      },
+      "download": "resources/CYB115_Lab_Index.docx",
+      "preview": "resources/cyb115-lab-index.json",
+      "tags": {
+        "en": [
+          "Cybersecurity",
+          "Lab",
+          "Commands",
+          "Windows",
+          "Linux",
+          "Network security",
+          "Document"
+        ],
+        "zh": [
+          "网络安全",
+          "实验",
+          "命令",
+          "操作系统",
+          "文档",
+          "资料"
+        ]
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "title": {
+        "en": "in the yard Chinese version",
+        "zh": "in the yard Chinese version"
+      },
+      "src": "assets/music/in-the-yard-chinese-version.mp3"
+    },
+    {
+      "title": {
+        "en": "In the yard",
+        "zh": "In the yard"
+      },
+      "src": "assets/music/in-the-yard.mp3"
+    }
+  ]
+}
