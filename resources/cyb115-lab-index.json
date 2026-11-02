@@ -1,0 +1,384 @@
+{
+  "intro": [
+    "CYB 115 Lab Table of Contents and Command List",
+    "Jinzhou Hao  |  Exam reference  |  Labs 1 to 9 and 11 to 19",
+    "Each lab section appears once with its topics, commands, tools, and paths together. Use Ctrl+F to search a topic, command, filename, or section number. Uppercase placeholders such as FILE, USERNAME, and VM_IP require actual values. ~ means the user home directory; / means the filesystem root."
+  ],
+  "rows": [
+    {
+      "id": "1A",
+      "en": "Windows screenshots and file browsing. Snipping Tool; File Explorer; desktop icons; web search screenshots.",
+      "zh": "Windows 截图与文件浏览。截图工具（Snipping Tool）；文件资源管理器；桌面图标；网页搜索截图。"
+    },
+    {
+      "id": "1B",
+      "en": "Network registries and IP lookup. ARIN: look up IP address ownership and registration information.",
+      "zh": "网络注册机构与 IP 查询。ARIN：查询 IP 地址的所有权和注册信息。"
+    },
+    {
+      "id": "1C",
+      "en": "Find the Windows IP address. Identify the computer IP address and capture the result.",
+      "zh": "查找 Windows IP 地址。识别计算机的 IP 地址并截图记录结果。"
+    },
+    {
+      "id": "2A",
+      "en": "Ubuntu VM setup and host resources. Task Manager > Performance > Memory; This PC > drive space; VMware > Create a New Virtual Machine; select Ubuntu ISO; review VM hardware.",
+      "zh": "Ubuntu 虚拟机设置与主机资源。任务管理器 > 性能 > 内存；此电脑 > 驱动器空间；VMware > 创建新虚拟机；选择 Ubuntu ISO；检查虚拟机硬件。"
+    },
+    {
+      "id": "2B",
+      "en": "Ubuntu memory disk and IP information. free -h; df -h; ip a; System Monitor.",
+      "zh": "Ubuntu 内存、磁盘和 IP 信息。free -h；df -h；ip a；系统监视器（System Monitor）。"
+    },
+    {
+      "id": "2C",
+      "en": "Windows IP configuration. cmd; ipconfig. Identify adapter IP addresses and the default gateway.",
+      "zh": "Windows IP 配置。cmd；ipconfig。识别适配器的 IP 地址和默认网关。"
+    },
+    {
+      "id": "2D",
+      "en": "Host and VM connectivity. ping IP_ADDRESS from Windows and Ubuntu; replace IP_ADDRESS with the target address.",
+      "zh": "主机与虚拟机连通性。在 Windows 和 Ubuntu 中运行 ping IP_ADDRESS；用目标地址替换 IP_ADDRESS。"
+    },
+    {
+      "id": "2E",
+      "en": "Basic Ubuntu terminal commands. whoami; hostname; ip address / ip a; date; history; clear.",
+      "zh": "Ubuntu 终端基本命令。whoami；hostname；ip address / ip a；date；history；clear。"
+    },
+    {
+      "id": "3A",
+      "en": "NAT and host only networking. VMware > VM > Settings > Network Adapter; ip a; ping IP_ADDRESS; ping 8.8.8.8; Ctrl+C stops ping.",
+      "zh": "NAT 与仅主机网络。VMware > VM > Settings > Network Adapter；ip a；ping IP_ADDRESS；ping 8.8.8.8；Ctrl+C 停止 ping。"
+    },
+    {
+      "id": "3B",
+      "en": "GUI file management and full paths. Files and Text Editor: create folders and a text file, move the file, and record its before/after paths.",
+      "zh": "图形界面文件管理与完整路径。在 Files 和 Text Editor 中创建文件夹与文本文件，移动文件，记录移动前后的路径。"
+    },
+    {
+      "id": "3C",
+      "en": "Terminal directory navigation. pwd; ls -ll; cd Desktop; cd /etc. Linux paths are case-sensitive.",
+      "zh": "终端目录导航。pwd；ls -ll；cd Desktop；cd /etc。Linux 路径区分大小写。"
+    },
+    {
+      "id": "3D",
+      "en": "Read other directories and files. cd ~ / cd; ls; ls /; ls /etc; cat /etc/timezone. Listing another directory does not change the working directory.",
+      "zh": "读取其他目录和文件。cd ~ / cd；ls；ls /；ls /etc；cat /etc/timezone。列出其他目录不会改变当前工作目录。"
+    },
+    {
+      "id": "4A",
+      "en": "IP address and empty file creation. ip addr show / ip a; touch FILE; ls.",
+      "zh": "IP 地址与创建空文件。ip addr show / ip a；touch FILE；ls。"
+    },
+    {
+      "id": "4B",
+      "en": "Create and remove files and directories. cd ~; mkdir green; ls; touch pink; rm pink. Recursive deletion: rm -r; forced recursive deletion: rm -rf. Check the target path before deletion.",
+      "zh": "创建和删除文件及目录。cd ~；mkdir green；ls；touch pink；rm pink。递归删除：rm -r；强制递归删除：rm -rf。删除前检查目标路径。"
+    },
+    {
+      "id": "4C",
+      "en": "Move and copy files. touch ~/example1.txt; mv ~/example1.txt ~/green/; cp ~/example2.txt ~/green/; ls ~/green/; Tab completion.",
+      "zh": "移动与复制文件。touch ~/example1.txt；mv ~/example1.txt ~/green/；cp ~/example2.txt ~/green/；ls ~/green/；Tab 自动补全。"
+    },
+    {
+      "id": "4D",
+      "en": "Nano editing and text display. nano movie_quote.txt; cat ~/movie_quote.txt; echo \"hello world\" > movie_quote.txt. Nano: Ctrl+O save, Enter confirm, Ctrl+X exit, Ctrl+W search, Ctrl+K cut, Ctrl+U paste.",
+      "zh": "Nano 编辑与文本显示。nano movie_quote.txt；cat ~/movie_quote.txt；echo \"hello world\" > movie_quote.txt。Nano：Ctrl+O 保存，Enter 确认，Ctrl+X 退出，Ctrl+W 搜索，Ctrl+K 剪切，Ctrl+U 粘贴。"
+    },
+    {
+      "id": "5A",
+      "en": "Append text and complete filenames. echo hello >> example.txt; cat example.txt; Tab completes matching filenames.",
+      "zh": "追加文本与补全文件名。echo hello >> example.txt；cat example.txt；Tab 补全匹配的文件名。"
+    },
+    {
+      "id": "5B",
+      "en": "Elevated permissions for protected files. nano /file vs. sudo nano /file; rm /file vs. sudo rm /file. Compare permission-denied and successful results.",
+      "zh": "以提升的权限操作受保护文件。对比 nano /file 与 sudo nano /file；rm /file 与 sudo rm /file。比较权限被拒绝和成功执行的结果。"
+    },
+    {
+      "id": "5C",
+      "en": "Root shell and protected directories. sudo su -; mkdir /home/NAME; ls /home/; exit; rmdir /home/NAME; sudo rmdir /home/NAME. rmdir removes empty directories.",
+      "zh": "Root shell 与受保护目录。sudo su -；mkdir /home/NAME；ls /home/；exit；rmdir /home/NAME；sudo rmdir /home/NAME。rmdir 删除空目录。"
+    },
+    {
+      "id": "5D",
+      "en": "Install and test Apache. sudo apt-get update; sudo apt-get install apache2; ip addr show; browse http://localhost and http://VM_IP.",
+      "zh": "安装与测试 Apache。sudo apt-get update；sudo apt-get install apache2；ip addr show；访问 http://localhost 和 http://VM_IP。"
+    },
+    {
+      "id": "6A",
+      "en": "Replace the Apache default web page. ip a; cp; rm; touch index.html; sudo nano index.html; cat index.html. Back up, replace, and test the page.",
+      "zh": "替换 Apache 默认网页。ip a；cp；rm；touch index.html；sudo nano index.html；cat index.html。备份、替换并测试网页。"
+    },
+    {
+      "id": "6B",
+      "en": "Apache on port 8080. Edit /etc/apache2/ports.conf with sudo nano ports.conf from its directory; add Listen 8080; restart Apache; browse http://VM_IP:8080.",
+      "zh": "让 Apache 使用 8080 端口。在 /etc/apache2/ 目录中用 sudo nano ports.conf 编辑 /etc/apache2/ports.conf；添加 Listen 8080；重启 Apache；访问 http://VM_IP:8080。"
+    },
+    {
+      "id": "6C",
+      "en": "Start SSH and connect with PuTTY. sudo systemctl status ssh; sudo systemctl start ssh; ip a; PuTTY > SSH > VM IP address.",
+      "zh": "启动 SSH 并使用 PuTTY 连接。sudo systemctl status ssh；sudo systemctl start ssh；ip a；PuTTY > SSH > 虚拟机 IP 地址。"
+    },
+    {
+      "id": "6D",
+      "en": "Remote terminal and Linux filesystem. PuTTY: ls; cd; cat; touch; pwd; nano Jinzhou_Hao.txt. Explore /, /boot, /var, /etc, /mnt, /home; inspect /etc/timezone, /etc/fstab, and /boot/grub/grub.cfg.",
+      "zh": "远程终端与 Linux 文件系统。PuTTY：ls；cd；cat；touch；pwd；nano Jinzhou_Hao.txt。探索 /、/boot、/var、/etc、/mnt、/home；检查 /etc/timezone、/etc/fstab 和 /boot/grub/grub.cfg。"
+    },
+    {
+      "id": "7A",
+      "en": "Local hostname mapping and name resolution. Configure a local IP-to-name mapping; ping spaceship to test hostname resolution. Search this section for the Linux hosts-file exercise.",
+      "zh": "本地主机名映射与名称解析。配置本地 IP 到名称的映射；运行 ping spaceship 测试主机名解析。Linux hosts 文件练习归于本节。"
+    },
+    {
+      "id": "7B",
+      "en": "Users and password hashes. sudo adduser userone; sudo adduser usertwo; inspect /etc/shadow and compare the stored hashes.",
+      "zh": "用户与密码哈希。sudo adduser userone；sudo adduser usertwo；检查 /etc/shadow 并比较保存的哈希值。"
+    },
+    {
+      "id": "7C",
+      "en": "Linux file permissions and ownership. Change read/write permissions, test editing in Nano, change ownership with chown, and test access again. Exact permission command arguments: see the original screenshots.",
+      "zh": "Linux 文件权限与所有权。修改读写权限，测试 Nano 编辑，用 chown 修改所有权，再次测试访问。确切的权限命令参数请查看原始截图。"
+    },
+    {
+      "id": "8A",
+      "en": "Redirection pipes tee and whois installation. ip addr > ipinfo.txt; ls -l /usr/bin > ls-output.txt; cat /etc/timezone >> tz.txt; COMMAND | tee FILE. > replaces; >> appends; tee displays and saves. Includes saving whois installation output to installresults.txt.",
+      "zh": "重定向、管道、tee 与 whois 安装。ip addr > ipinfo.txt；ls -l /usr/bin > ls-output.txt；cat /etc/timezone >> tz.txt；COMMAND | tee FILE。> 覆盖；>> 追加；tee 同时显示和保存。包括将 whois 安装输出保存到 installresults.txt。"
+    },
+    {
+      "id": "8B",
+      "en": "Job control and foreground background processes. Ping output grows as results are appended to a file; pause/suspend and resume a process; compare foreground/background behavior. Exact job-control commands: see the original screenshots.",
+      "zh": "作业控制与前台、后台进程。将 ping 输出追加到文件时，文件内容持续增加；暂停或挂起进程，再恢复；比较前台与后台行为。确切的作业控制命令请查看原始截图。"
+    },
+    {
+      "id": "8C",
+      "en": "Create users and change passwords. sudo adduser USERNAME; sudo passwd USERNAME. Use the same account name in both commands.",
+      "zh": "创建用户与修改密码。sudo adduser USERNAME；sudo passwd USERNAME。两条命令使用同一个账户名。"
+    },
+    {
+      "id": "8D",
+      "en": "Remote login and file access. PuTTY: sign in to the remote account; navigate to the file; nano goofy.txt.",
+      "zh": "远程登录与文件访问。PuTTY：登录远程账户；导航到目标文件；nano goofy.txt。"
+    },
+    {
+      "id": "8E",
+      "en": "Enable UFW and allow web access. sudo ufw enable; sudo ufw allow 80; compare web access before and after allowing port 80.",
+      "zh": "启用 UFW 并允许网页访问。sudo ufw enable；sudo ufw allow 80；比较放行 80 端口前后的网页访问情况。"
+    },
+    {
+      "id": "9A",
+      "en": "Apache installation and service checks. sudo apt update; sudo apt install apache2; sudo systemctl status apache2; ip addr show; verify SSH is running; test the Apache page.",
+      "zh": "Apache 安装与服务检查。sudo apt update；sudo apt install apache2；sudo systemctl status apache2；ip addr show；确认 SSH 已运行；测试 Apache 网页。"
+    },
+    {
+      "id": "9B",
+      "en": "Rename the default Apache page. PuTTY over SSH port 22; cd /var/www/html; sudo mv index.html olddefault.html; browse http://VM_IP/olddefault.html.",
+      "zh": "重命名 Apache 默认网页。通过 SSH 22 端口使用 PuTTY；cd /var/www/html；sudo mv index.html olddefault.html；访问 http://VM_IP/olddefault.html。"
+    },
+    {
+      "id": "9C",
+      "en": "Read and copy remote HTML. PuTTY; cd /pluto; ls; cat index.html; nano. Copy the remote HTML into the local Apache page and test it in a browser.",
+      "zh": "读取与复制远程 HTML。PuTTY；cd /pluto；ls；cat index.html；nano。将远程 HTML 复制到本地 Apache 网页，并在浏览器测试。"
+    },
+    {
+      "id": "9D",
+      "en": "Apache custom port 1961. sudo nano /etc/apache2/ports.conf; set Listen 1961; sudo nano /etc/apache2/sites-available/000-default.conf; set virtual-host port 1961; sudo systemctl restart apache2; browse http://VM_IP:1961.",
+      "zh": "Apache 自定义 1961 端口。sudo nano /etc/apache2/ports.conf；设置 Listen 1961；sudo nano /etc/apache2/sites-available/000-default.conf；把虚拟主机端口设为 1961；sudo systemctl restart apache2；访问 http://VM_IP:1961。"
+    },
+    {
+      "id": "9E",
+      "en": "UFW rules for SSH and custom HTTP. Allow incoming ports 22 and 1961; sudo ufw enable; sudo ufw status verbose; test http://VM_IP:1961.",
+      "zh": "UFW 的 SSH 与自定义 HTTP 规则。允许入站端口 22 和 1961；sudo ufw enable；sudo ufw status verbose；测试 http://VM_IP:1961。"
+    },
+    {
+      "id": "11A",
+      "en": "Windows VM connection. Connect to the Windows VM, authenticate, and reach the desktop.",
+      "zh": "连接 Windows 虚拟机。连接 Windows VM，完成身份验证并进入桌面。"
+    },
+    {
+      "id": "11B",
+      "en": "Windows and Linux command comparison. Run as administrator; cd; dir; mkdir; notepad; ipconfig /all; winget. Linux comparison terms: sudo, ls, cp, mv, cat, nano, ip addr, apt-get. Check the shell: PowerShell aliases and Command Prompt commands differ.",
+      "zh": "Windows 与 Linux 命令比较。以管理员身份运行；cd；dir；mkdir；notepad；ipconfig /all；winget。Linux 对照术语：sudo、ls、cp、mv、cat、nano、ip addr、apt-get。注意所用 shell：PowerShell 别名与命令提示符命令有所不同。"
+    },
+    {
+      "id": "11C",
+      "en": "Windows hosts file. Administrator shell: cd \\Windows\\System32\\drivers\\etc; dir; edit hosts in Notepad; Ctrl+S; ping spaceship.",
+      "zh": "Windows hosts 文件。管理员 shell：cd \\Windows\\System32\\drivers\\etc；dir；使用记事本编辑 hosts；Ctrl+S；ping spaceship。"
+    },
+    {
+      "id": "12A",
+      "en": "Remote Desktop RDP connection. Settings > System > Remote Desktop > Enable; ipconfig; Remote Desktop Connection > VM IP > More choices > Use a different account.",
+      "zh": "远程桌面 RDP 连接。设置 > 系统 > 远程桌面 > 启用；ipconfig；远程桌面连接 > 虚拟机 IP > 更多选项 > 使用其他账户。"
+    },
+    {
+      "id": "12B",
+      "en": "Network share and installer copy. VMware network adapter > NAT; ipconfig; Run > \\\\SERVER\\SHARE; authenticate; copy MBSetup-4.4.exe to the local desktop.",
+      "zh": "网络共享与复制安装程序。VMware 网络适配器 > NAT；ipconfig；运行 > \\\\SERVER\\SHARE；身份验证；复制 MBSetup-4.4.exe 到本地桌面。"
+    },
+    {
+      "id": "12C",
+      "en": "Malwarebytes installation. Run the copied installer and explore malware removal and protection features.",
+      "zh": "安装 Malwarebytes。运行复制的安装程序，探索恶意软件清除与防护功能。"
+    },
+    {
+      "id": "13A",
+      "en": "Install and test IIS. Control Panel > Programs and Features > Turn Windows features on or off > Internet Information Services; browse http://VM_IP.",
+      "zh": "安装与测试 IIS。控制面板 > 程序和功能 > 启用或关闭 Windows 功能 > Internet Information Services；访问 http://VM_IP。"
+    },
+    {
+      "id": "13B",
+      "en": "Stop IIS through Services. Windows Tools > Services > World Wide Web Publishing Service > Stop; refresh the website and observe failure.",
+      "zh": "通过服务停止 IIS。Windows 工具 > 服务 > World Wide Web Publishing Service > 停止；刷新网站并观察访问失败。"
+    },
+    {
+      "id": "13C",
+      "en": "IIS Manager and service control. Start World Wide Web Publishing Service; open IIS Manager; stop the web server; refresh Services with F5; start it again.",
+      "zh": "IIS 管理器与服务控制。启动 World Wide Web Publishing Service；打开 IIS 管理器；停止 Web 服务器；按 F5 刷新服务列表；再次启动。"
+    },
+    {
+      "id": "13D",
+      "en": "Windows service review. Services > Properties: compare Status and Startup type; inspect Task Scheduler and review disabled or stopped services.",
+      "zh": "Windows 服务检查。服务 > 属性：比较状态（Status）和启动类型（Startup type）；检查任务计划程序并查看已禁用或停止的服务。"
+    },
+    {
+      "id": "13E",
+      "en": "Netlogon DNS Client and HTTP firewall rule. Service properties: Netlogon and DNS Client. Firewall: Windows Defender Firewall > Advanced settings > Inbound Rules > World Wide Web Services (HTTP Traffic-In) > Properties; inspect the port and test Block the connection. Both source headings are labelled 13E.",
+      "zh": "Netlogon、DNS Client 与 HTTP 防火墙规则。查看 Netlogon 和 DNS Client 的服务属性。防火墙：Windows Defender 防火墙 > 高级设置 > 入站规则 > World Wide Web Services (HTTP Traffic-In) > 属性；检查端口并测试“阻止连接”。两个原始标题均标为 13E。"
+    },
+    {
+      "id": "13F",
+      "en": "IIS custom port and firewall. IIS Manager > Sites > Default Web Site > Bindings > HTTP port 8080; Firewall > Inbound Rules > New Rule > Port > TCP 8080 > Allow; test http://VM_IP:8080.",
+      "zh": "IIS 自定义端口与防火墙。IIS 管理器 > 站点 > Default Web Site > 绑定 > HTTP 端口 8080；防火墙 > 入站规则 > 新建规则 > 端口 > TCP 8080 > 允许；测试 http://VM_IP:8080。"
+    },
+    {
+      "id": "14A",
+      "en": "Drive file systems NTFS and properties. File Explorer > drive Properties: compare filesystem, drive type, and available tabs. C: and the examined S: network drive showed NTFS; distinguish local, removable, and network drives.",
+      "zh": "驱动器文件系统、NTFS 与属性。文件资源管理器 > 驱动器属性：比较文件系统、驱动器类型和可用选项卡。C: 和所检查的 S: 网络驱动器都显示 NTFS；区分本地、可移动和网络驱动器。"
+    },
+    {
+      "id": "14B",
+      "en": "NTFS group permissions. Create C:\\rose; Properties > Security; compare Authenticated Users, SYSTEM, Administrators, and Users.",
+      "zh": "NTFS 组权限。创建 C:\\rose；属性 > 安全；比较 Authenticated Users、SYSTEM、Administrators 和 Users。"
+    },
+    {
+      "id": "14C",
+      "en": "Effective Access. C:\\rose > Properties > Security > Advanced > Effective Access > Select a user > View effective access.",
+      "zh": "有效访问。C:\\rose > 属性 > 安全 > 高级 > 有效访问 > 选择用户 > 查看有效访问。"
+    },
+    {
+      "id": "14D",
+      "en": "Disable inheritance and restore access. Properties > Security > Advanced > Disable inheritance > remove inherited permissions; test access; restore the required permissions and test again.",
+      "zh": "禁用继承与恢复访问。属性 > 安全 > 高级 > 禁用继承 > 删除继承的权限；测试访问；恢复所需权限并再次测试。"
+    },
+    {
+      "id": "14E",
+      "en": "Local users and special permissions. Computer Management > Local Users and Groups > Users > New User; create Jinzhou; configure create/delete allow and deny entries for analyst and Jinzhou in C:\\rose\\Jinzhou.",
+      "zh": "本地用户与特殊权限。计算机管理 > 本地用户和组 > 用户 > 新用户；创建 Jinzhou；在 C:\\rose\\Jinzhou 中为 analyst 和 Jinzhou 配置创建和删除的允许与拒绝条目。"
+    },
+    {
+      "id": "14F",
+      "en": "Compare inherited file permissions. Create files in C:\\rose and its subfolder; compare Security entries and inherited account-specific permissions.",
+      "zh": "比较继承的文件权限。在 C:\\rose 及其子文件夹中创建文件；比较安全条目和继承的特定账户权限。"
+    },
+    {
+      "id": "15A",
+      "en": "Ownership and access recovery. Create Snoopy and C:\\doghouse; file Properties > Security > Advanced > change Owner; remove inherited permissions; test denial; restore ownership and grant access.",
+      "zh": "所有权与访问恢复。创建 Snoopy 和 C:\\doghouse；文件属性 > 安全 > 高级 > 更改所有者；删除继承权限；测试访问被拒绝；恢复所有权并授予访问权限。"
+    },
+    {
+      "id": "15B",
+      "en": "Read only network sharing. Folder Properties > Sharing > Advanced Sharing > Share this folder > Permissions > Everyone: Read; open \\\\VM_IP\\Lab-15_SharingFile; compare copying out with copying in.",
+      "zh": "只读网络共享。文件夹属性 > 共享 > 高级共享 > 共享此文件夹 > 权限 > Everyone：读取；打开 \\\\VM_IP\\Lab-15_SharingFile；比较复制出去与复制进去。"
+    },
+    {
+      "id": "15C",
+      "en": "Share permissions and NTFS permissions. Security > Users: Full Control; Advanced Sharing > Everyone: Read; open \\\\VM_IP\\SHARE; copying out works, while network writes/renames are restricted by the share permission.",
+      "zh": "共享权限与 NTFS 权限。安全 > Users：完全控制；高级共享 > Everyone：读取；打开 \\\\VM_IP\\SHARE；允许复制出去，而网络写入与重命名受共享权限限制。"
+    },
+    {
+      "id": "15D",
+      "en": "Administrative shares. Computer Management > Shared Folders > Shares; inspect C$ and ADMIN$; open \\\\VM_IP\\C$ with an administrator account; test file operations.",
+      "zh": "管理共享。计算机管理 > 共享文件夹 > 共享；检查 C$ 和 ADMIN$；使用管理员账户打开 \\\\VM_IP\\C$；测试文件操作。"
+    },
+    {
+      "id": "16A",
+      "en": "Registry startup entry backup and restore. regedit > HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run; Export; add String Value NotepadLauncher = C:\\Windows\\System32\\Notepad.exe; restart/test; delete the added value; merge the backup.",
+      "zh": "注册表启动项的备份与恢复。regedit > HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run；导出；添加字符串值 NotepadLauncher = C:\\Windows\\System32\\Notepad.exe；重启并测试；删除新增值；合并备份。"
+    },
+    {
+      "id": "16B",
+      "en": "Windows Features time zone and printers. Windows Features > Telnet Client; compare Control Panel and Settings time-zone controls; Printers & scanners > Microsoft Print to PDF > Set as default.",
+      "zh": "Windows 功能、时区与打印机。Windows 功能 > Telnet Client；比较控制面板与设置中的时区选项；打印机和扫描仪 > Microsoft Print to PDF > 设为默认。"
+    },
+    {
+      "id": "16C",
+      "en": "Bing search registry setting. regedit > HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer; DWORD DisableSearchBoxSuggestions = 1; restart/test Start search.",
+      "zh": "Bing 搜索注册表设置。regedit > HKCU\\Software\\Policies\\Microsoft\\Windows\\Explorer；DWORD DisableSearchBoxSuggestions = 1；重启并测试开始菜单搜索。"
+    },
+    {
+      "id": "16D",
+      "en": "Document metadata. Rime.docx > Properties > Details; inspect author, last saved by, creation/save times, and content type.",
+      "zh": "文档元数据。Rime.docx > 属性 > 详细信息；检查作者、最后保存者、创建和保存时间以及内容类型。"
+    },
+    {
+      "id": "17A",
+      "en": "PDF inspection in HxD. Extract the lab archive; open intro-linux.pdf in HxD; inspect hexadecimal bytes, decoded text, and PDF header; distinguish file corruption from encryption.",
+      "zh": "使用 HxD 检查 PDF。解压实验压缩包；在 HxD 打开 intro-linux.pdf；检查十六进制字节、解码文本和 PDF 文件头；区分文件损坏与加密。"
+    },
+    {
+      "id": "17B",
+      "en": "Word inspection and encryption. Open The first rule.doc in HxD and Word; Word > File > Info > Protect Document > Encrypt with Password; compare the file bytes before and after encryption.",
+      "zh": "Word 文件检查与加密。在 HxD 和 Word 中打开 The first rule.doc；Word > 文件 > 信息 > 保护文档 > 用密码进行加密；比较加密前后的文件字节。"
+    },
+    {
+      "id": "17C",
+      "en": "Password protected archives. 7-Zip: archive Grand Canyon.txt as 7z with AES-256 and ZIP with ZipCrypto; compare extraction and password prompts in File Explorer.",
+      "zh": "密码保护的压缩包。7-Zip：将 Grand Canyon.txt 分别用 AES-256 加密为 7z、用 ZipCrypto 加密为 ZIP；比较文件资源管理器中的解压与密码提示。"
+    },
+    {
+      "id": "17D",
+      "en": "VeraCrypt encrypted container. Create a 500 MB container with AES and FAT; set a password; mount as X:; create files/folders; Unmount All.",
+      "zh": "VeraCrypt 加密容器。创建使用 AES 和 FAT 的 500 MB 容器；设置密码；挂载为 X:；创建文件和文件夹；Unmount All（全部卸载）。"
+    },
+    {
+      "id": "18A",
+      "en": "Text hashing and capitalization. HashCalc > Text string > MD5 and SHA1; compare bulldog with Bulldog.",
+      "zh": "文本哈希与大小写。HashCalc > Text string > MD5 和 SHA1；比较 bulldog 与 Bulldog。"
+    },
+    {
+      "id": "18B",
+      "en": "Compare file hashes. HashCalc and PowerShell: Get-FileHash \"FILE\" -Algorithm SHA1; compare original intro-linux.pdf with FileA and FileB.",
+      "zh": "比较文件哈希。HashCalc 与 PowerShell：Get-FileHash \"FILE\" -Algorithm SHA1；比较原始 intro-linux.pdf 与 FileA、FileB。"
+    },
+    {
+      "id": "18C",
+      "en": "File transfer integrity. sudo systemctl status ssh; sudo systemctl enable --now ssh; ip a; WinSCP > SCP > port 22; transfer to /home/ubuntu; shasum intro-linux.pdf; compare hashes.",
+      "zh": "文件传输完整性。sudo systemctl status ssh；sudo systemctl enable --now ssh；ip a；WinSCP > SCP > 22 端口；传输到 /home/ubuntu；shasum intro-linux.pdf；比较哈希值。"
+    },
+    {
+      "id": "18D",
+      "en": "Verify a downloaded file. PowerShell: Get-FileHash \"HxDSetup.zip\" -Algorithm SHA1; repeat with -Algorithm SHA512; compare complete hashes with the published values.",
+      "zh": "验证下载文件。PowerShell：Get-FileHash \"HxDSetup.zip\" -Algorithm SHA1；再使用 -Algorithm SHA512；将完整哈希值与发布的值比较。"
+    },
+    {
+      "id": "19A",
+      "en": "Telnet plaintext and SSH encryption in Wireshark. sudo apt update; sudo apt-get install telnetd openssh-server; sudo nano /etc/inetd.conf; sudo systemctl restart inetd; sudo systemctl status inetd; sudo systemctl start ssh. PuTTY: compare Telnet 23 and SSH 22 using pwd, ls, cat /etc/timezone. Wireshark: tcp.port == 22; Follow > TCP Stream; compare readable credentials/commands with encrypted session data.",
+      "zh": "Wireshark 中的 Telnet 明文与 SSH 加密。sudo apt update；sudo apt-get install telnetd openssh-server；sudo nano /etc/inetd.conf；sudo systemctl restart inetd；sudo systemctl status inetd；sudo systemctl start ssh。PuTTY：使用 pwd、ls、cat /etc/timezone 比较 Telnet 23 和 SSH 22。Wireshark：tcp.port == 22；Follow > TCP Stream；比较可读的凭据、命令与加密会话数据。"
+    },
+    {
+      "id": "19B",
+      "en": "SMB file transfer and image recovery. Folder Properties > Sharing; Run > \\\\VM_IP; copy an image to the share during capture; Wireshark > File > Export Objects > SMB > Save.",
+      "zh": "SMB 文件传输与图片恢复。文件夹属性 > 共享；运行 > \\\\VM_IP；在捕获流量期间复制图片到共享；Wireshark > File > Export Objects > SMB > Save。"
+    },
+    {
+      "id": "19C",
+      "en": "HTTP file recovery from PCAP. Open the supplied PCAP in Wireshark; display filter: http; File > Export Objects > HTTP; select and save the image.",
+      "zh": "从 PCAP 恢复 HTTP 文件。在 Wireshark 打开提供的 PCAP；显示过滤器：http；File > Export Objects > HTTP；选择并保存图片。"
+    }
+  ],
+  "introZh": [
+    "CYB 115 实验目录与命令列表",
+    "Jinzhou Hao（金洲）｜考试参考｜实验 1–9 和 11–19",
+    "每个实验小节仅列出一次，集中整理主题、命令、工具和路径。可使用 Ctrl+F 搜索主题、命令、文件名或章节编号。FILE、USERNAME、VM_IP 等大写占位符需要替换为实际值。~ 表示用户主目录；/ 表示文件系统根目录。"
+  ]
+}
