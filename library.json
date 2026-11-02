@@ -61,6 +61,42 @@
           "资料"
         ]
       }
+    },
+    {
+      "id": "cybersecurity-exams",
+      "category": "cybersecurity",
+      "type": "link",
+      "title": {
+        "en": "Cybersecurity Exam Center",
+        "zh": "网络安全考试中心"
+      },
+      "description": {
+        "en": "Open CYB Study Studio: Ch6–Ch9, 80 questions across 8 units. Bilingual review, shuffled choices and cloud sync on the original study site. More exams can be added separately.",
+        "zh": "进入 CYB Study Studio：Ch6–Ch9 共 80 题、8 个单元。保留双语复习、随机选项和原站云端同步，后续考试可单独添加。"
+      },
+      "url": "cybersecurity/",
+      "tags": {
+        "en": [
+          "Exam",
+          "Quiz",
+          "Ch6",
+          "Ch7",
+          "Ch8",
+          "Ch9",
+          "Multiple choice",
+          "True or false",
+          "Study"
+        ],
+        "zh": [
+          "考试",
+          "题库",
+          "刷题",
+          "选择题",
+          "判断题",
+          "复习",
+          "云同步"
+        ]
+      }
     }
   ],
   "tracks": [

@@ -7,3 +7,7 @@ Search indexes both languages, category names and document contents regardless o
 Keep downloadable originals byte-identical. Provide readable web previews and paired translations without changing commands or paths. Validate document row counts and original text against the supplied document before publishing.
 
 Before publishing: check JavaScript syntax, both toggle directions, Chinese and English search, reader and download, mobile overflow and keyboard focus. Retain reduced-motion support and static image fallback. Publish through GitHub Pages and wait for the deployment to complete, then verify the public URL and original download.
+
+## Exam directory
+
+`cybersecurity/exams.json` lists independent exams. Add a new entry with a unique id, paired en/zh title and description, actual question/unit counts and its own practiceUrl. Do not replace the Ch6-Ch9 course bank when adding another exam. The original CYB Study Studio supplies authentication, cloud progress and admin features; this GitHub Pages directory only links to it. Do not copy personal progress, credentials, or databases. Do not claim the original study site was migrated to GitHub Pages.

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "exams": [
+    {
+      "id": "cyb-ch6-ch9",
+      "title": {"en": "Ch6–Ch9 Course Review", "zh": "Ch6–Ch9 课程复习"},
+      "description": {"en": "Review the existing course bank with shuffled questions and answer choices, word translations, answer review and carry-over mistake practice.", "zh": "使用现有课程题库复习，支持随机题序与选项、重点词点译、答案回顾，以及跨单元错题复习。"},
+      "questions": 80,
+      "units": 8,
+      "multipleChoice": 40,
+      "trueFalse": 40,
+      "practiceUrl": "https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site/practice.html",
+      "libraryUrl": "https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site/"
+    }
+  ]
+}
