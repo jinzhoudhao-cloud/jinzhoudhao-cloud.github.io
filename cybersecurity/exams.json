@@ -1,16 +1,39 @@
 {
-  "version": 1,
+  "version": 2,
   "exams": [
     {
       "id": "cyb-ch6-ch9",
-      "title": {"en": "Ch6–Ch9 Course Review", "zh": "Ch6–Ch9 课程复习"},
-      "description": {"en": "Review the existing course bank with shuffled questions and answer choices, word translations, answer review and carry-over mistake practice.", "zh": "使用现有课程题库复习，支持随机题序与选项、重点词点译、答案回顾，以及跨单元错题复习。"},
+      "title": {
+        "en": "Ch6–Ch9 Course Review",
+        "zh": "Ch6–Ch9 课程复习"
+      },
+      "description": {
+        "en": "Review the existing course bank with shuffled questions and answer choices, word translations, answer review and carry-over mistake practice.",
+        "zh": "使用现有课程题库复习，支持随机题序与选项、重点词点译、答案回顾，以及跨单元错题复习。"
+      },
       "questions": 80,
       "units": 8,
       "multipleChoice": 40,
       "trueFalse": 40,
       "practiceUrl": "https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site/practice.html",
       "libraryUrl": "https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site/"
+    },
+    {
+      "id": "cyb115-midterm",
+      "title": {
+        "en": "CYB115 Midterm Review",
+        "zh": "CYB115 期中考试题"
+      },
+      "description": {
+        "en": "Practice all 35 Test 2 Review questions with challenging choices, English–Chinese explanations, shuffled retries, and separate saved progress.",
+        "zh": "35道 Test 2 Review 选择题，选项有迷惑性，支持中英双语解析、随机重做、错题复习和独立进度保存。"
+      },
+      "questions": 35,
+      "units": 4,
+      "multipleChoice": 35,
+      "trueFalse": 0,
+      "practiceUrl": "https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site/practice.html?bank=cyb115-midterm",
+      "libraryUrl": "https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site/welcome#cyb115-card"
     }
   ]
 }
