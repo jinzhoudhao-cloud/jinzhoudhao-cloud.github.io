@@ -5,3 +5,28 @@
 button,.secondary,.primary{white-space:nowrap}.document-search button{flex-shrink:0}
 
 .floating-play{position:fixed;right:30px;bottom:28px;z-index:25;display:flex;align-items:center;gap:12px;min-height:56px;padding:14px 22px;border:1px solid #ffd6a7a0;border-radius:40px;background:linear-gradient(135deg,#ffbd77,#e77a30);color:#211107;font-weight:700;box-shadow:0 8px 35px #0009,0 0 25px #ff9e3a30;transition:box-shadow .2s,transform .2s}.floating-play:hover{color:#110800;border-color:#fff0dc;box-shadow:0 8px 35px #0009,0 0 32px #ff9e3a70;transform:translateY(-2px)}.floating-play.is-playing{background:linear-gradient(135deg,#1d222d,#0b0e15);color:#ffc18b;border-color:#ffae6870}.floating-play:disabled{opacity:.45}#floating-play-icon{font-size:19px;width:22px;text-align:center}#floating-play-label{font-size:13px}@media(max-width:767px),(hover:none) and (pointer:coarse){.floating-play{display:none}}@media(prefers-reduced-motion:reduce){.floating-play{transition:none}}
+
+/* --- multi-document reader (Lab 23 起) --- */
+.doc-sections{padding-top:4px}
+.doc-section{border-top:1px solid var(--line);padding:22px 0 4px}
+.doc-section:first-child{border-top:0;padding-top:0}
+.doc-section-head{display:flex;gap:14px;align-items:baseline;margin-bottom:14px}
+.doc-section-id{font-family:monospace;color:var(--accent);font-size:13px;letter-spacing:.04em}
+.doc-section h3{margin:0;font-size:18px;font-weight:600;line-height:1.35}
+.doc-paragraph{margin:0 0 14px;max-width:78ch;overflow-wrap:anywhere}
+.doc-figure{margin:0 0 18px}
+.doc-figure img{display:block;width:100%;max-width:960px;height:auto;border:1px solid var(--line);border-radius:8px;background:#000}
+.lab-table[hidden],.doc-sections[hidden]{display:none}
+@media(max-width:680px){.doc-section h3{font-size:16px}.doc-section-id{font-size:12px}.doc-paragraph{max-width:none}.doc-figure img{border-radius:6px}}
+
+/* 小屏阅读器：动作按钮换行，避免 4 个控件把对话框撑出视口 */
+@media(max-width:680px){
+  #document-reader{width:100vw;max-width:100vw;border-radius:0}
+  .reader-toolbar{padding:12px 14px}
+  .reader-actions{flex-wrap:wrap}
+  .reader-actions .secondary{flex:1 1 46%;text-align:center}
+  .reader-actions .language-toggle{flex:1 1 auto;margin-left:0}
+  .reader-body{overflow-x:hidden}
+  .doc-section-head{flex-wrap:wrap;gap:8px}
+  .doc-section h3{flex:1 1 100%}
+}

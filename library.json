@@ -63,6 +63,49 @@
       }
     },
     {
+      "id": "cyb115-lab23",
+      "category": "cybersecurity",
+      "type": "document",
+      "title": {
+        "en": "CYB 115 Lab 23 — Your First Bash Script",
+        "zh": "CYB 115 实验 23 —— 第一次用 Bash 脚本"
+      },
+      "description": {
+        "en": "Lab 23 log: permissions, echo, variables, read, grep pipes, backups and awk counting, with 46 terminal screenshots. Bilingual web edition; original Word files downloadable.",
+        "zh": "实验 23 记录：权限、echo、变量、read、grep 管道、备份与 awk 计数，含 46 张终端截图。中英对照网页版，可下载原始 Word 文件。"
+      },
+      "download": "resources/CYB115_Lab_23.docx",
+      "downloadName": "CYB115_Lab_23_JinzhouHao.docx",
+      "downloadZh": "resources/CYB115_Lab_23_zh.docx",
+      "downloadZhName": "CYB 115 - Lab 23-JInzhouHaoCN.docx",
+      "preview": "resources/cyb115-lab23.json",
+      "tags": {
+        "en": [
+          "Cybersecurity",
+          "Bash",
+          "Shell script",
+          "Permissions",
+          "grep",
+          "awk",
+          "Backup",
+          "Linux",
+          "Terminal"
+        ],
+        "zh": [
+          "网络安全",
+          "Bash",
+          "脚本",
+          "权限",
+          "管道",
+          "grep",
+          "awk",
+          "备份",
+          "Linux",
+          "终端"
+        ]
+      }
+    },
+    {
       "id": "cybersecurity-exams",
       "category": "cybersecurity",
       "type": "link",

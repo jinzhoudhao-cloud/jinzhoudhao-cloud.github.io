@@ -3,27 +3,101 @@
 'use strict';
 const strings={
 skip:['Skip to resources','跳转到资源'],brand:['JINZHOU','金洲'],brandSub:['ONLINE RESOURCE LIBRARY','网上资源库'],navigation:['Main navigation','主导航'],videos:['Video Resources','视频资源'],cybersecurity:['Cybersecurity','网络安全'],code:['Code Resources','代码资源'],gallery:['Gallery','画廊'],journal:['Journal','日志'],
-heroEyebrow:['A PERSONAL LIBRARY / AN OPEN UNIVERSE','个人资源库 / 开放的宇宙'],title:['Jinzhou’s Online\nResource Library','金洲的网上资源库'],intro:['A place for useful knowledge, creative work and discoveries worth keeping.','收藏实用知识、创意作品，以及值得留存的每一次发现。'],explore:['Explore the library ↘','探索资源库 ↘'],heroFoot:['COLLECT KNOWLEDGE. SHARE CURIOSITY.','收藏知识，分享好奇心。'],motionOn:['Motion on','动态已开启'],motionOff:['Motion off','动态已关闭'],browseEyebrow:['YOUR NEXT DISCOVERY','开启下一次发现'],browseTitle:['Explore the collection','浏览资源收藏'],searchHint:['Search in English or Chinese, in either interface language.','无论当前界面语言是什么，都可以用中文或英文搜索。'],searchLabel:['Search all resources','搜索全部资源'],searchPlaceholder:['Search topics, commands, titles…','搜索主题、命令、标题……'],clear:['Clear','清除'],categories:['Resource categories','资源分类'],all:['All resources','全部资源'],noResults:['No matching resources','没有找到匹配的资源'],noResultsHint:['Try a topic in English or Chinese, or clear the category filter.','试试其他中文或英文关键词，或清除分类筛选。'],reset:['Reset search','重置搜索'],musicTitle:['Music room · In the yard','音乐空间 · In the yard'],musicHint:['Listen to the two published tracks below. You can also preview local audio; files you select stay in your browser and are not uploaded.','在下方收听两首已发布的歌曲。也可以试听本地音频；自行选择的文件仅保留在浏览器中，不会上传。'],chooseMusic:['Choose audio files','选择音频文件'],noMusic:['No public tracks yet.','暂未发布音乐。'],play:['Play','播放'],pause:['Pause','暂停'],previous:['Previous','上一首'],next:['Next','下一首'],seek:['Playback position','播放进度'],volume:['Volume','音量'],exitListening:['Return to published tracks','返回已发布曲目'],footerDescription:['Knowledge, art and curiosity — collected in one place.','让知识、艺术与好奇心，在这里相遇。'],github:['GitHub profile ↗','GitHub 主页 ↗'],backTop:['Back to top ↑','返回顶部 ↑'],download:['Download DOCX ↓','下载 DOCX ↓'],readerEyebrow:['CYBERSECURITY / DOCUMENT READER','网络安全 / 文档阅读'],closeReader:['Close reader','关闭阅读器'],readerNote:['Readable web edition with a Chinese translation. The downloadable Word document is the unchanged English original.','网页阅读版提供中文翻译；下载的 Word 文档为未经改动的英文原文件。'],documentSearch:['Search this document','搜索本文档'],documentPlaceholder:['Try firewall, 权限, or Lab 19A','试试防火墙、SSH 或 19A'],lab:['Lab','实验'],contents:['Contents and commands','内容与命令'],noLabResults:['No matching lab entries. Try another keyword.','没有匹配的实验条目，请换一个关键词。'],closeArtwork:['Close artwork','关闭作品'],open:['Visit resource ↗','访问资源 ↗'],read:['Read online ↗','在线阅读 ↗'],viewArt:['View artwork','查看画作'],empty:['Nothing published here yet. This space is ready for future additions.','这里还没有发布内容，后续资源将在此展示。'],resourceCount:['{n} resource(s)','{n} 个资源'],labCount:['{n} of {total} lab entries','{total} 个实验条目中显示 {n} 个'],matches:['{n} matching lab entries inside this document','本文档中有 {n} 个匹配的实验条目'],viewLab:['View Lab {id}','查看实验 {id}'],loadError:['The library could not load. Please refresh to retry.','资源库暂时无法加载，请刷新重试。'],audioError:['This audio file could not be played. Please try another file.','此音频无法播放，请尝试其他文件。'],listening:['Now selected: {name}','当前曲目：{name}'],document:['DOCUMENT / DOCX','文档 / DOCX'],link:['EXTERNAL RESOURCE','外部资源'],artwork:['ARTWORK','艺术画作']};
+heroEyebrow:['A PERSONAL LIBRARY / AN OPEN UNIVERSE','个人资源库 / 开放的宇宙'],title:['Jinzhou’s Online\nResource Library','金洲的网上资源库'],intro:['A place for useful knowledge, creative work and discoveries worth keeping.','收藏实用知识、创意作品，以及值得留存的每一次发现。'],explore:['Explore the library ↘','探索资源库 ↘'],heroFoot:['COLLECT KNOWLEDGE. SHARE CURIOSITY.','收藏知识，分享好奇心。'],motionOn:['Motion on','动态已开启'],motionOff:['Motion off','动态已关闭'],browseEyebrow:['YOUR NEXT DISCOVERY','开启下一次发现'],browseTitle:['Explore the collection','浏览资源收藏'],searchHint:['Search in English or Chinese, in either interface language.','无论当前界面语言是什么，都可以用中文或英文搜索。'],searchLabel:['Search all resources','搜索全部资源'],searchPlaceholder:['Search topics, commands, titles…','搜索主题、命令、标题……'],clear:['Clear','清除'],categories:['Resource categories','资源分类'],all:['All resources','全部资源'],noResults:['No matching resources','没有找到匹配的资源'],noResultsHint:['Try a topic in English or Chinese, or clear the category filter.','试试其他中文或英文关键词，或清除分类筛选。'],reset:['Reset search','重置搜索'],musicTitle:['Music room · In the yard','音乐空间 · In the yard'],musicHint:['Listen to the two published tracks below. You can also preview local audio; files you select stay in your browser and are not uploaded.','在下方收听两首已发布的歌曲。也可以试听本地音频；自行选择的文件仅保留在浏览器中，不会上传。'],chooseMusic:['Choose audio files','选择音频文件'],noMusic:['No public tracks yet.','暂未发布音乐。'],play:['Play','播放'],pause:['Pause','暂停'],previous:['Previous','上一首'],next:['Next','下一首'],seek:['Playback position','播放进度'],volume:['Volume','音量'],exitListening:['Return to published tracks','返回已发布曲目'],footerDescription:['Knowledge, art and curiosity — collected in one place.','让知识、艺术与好奇心，在这里相遇。'],github:['GitHub profile ↗','GitHub 主页 ↗'],backTop:['Back to top ↑','返回顶部 ↑'],download:['Download DOCX ↓','下载 DOCX ↓'],downloadZh:['Chinese version DOCX ↓','中文版 DOCX ↓'],viewSection:['View section {id}','查看 {id} 小节'],matchesBlocks:['{n} matching entries inside this document','本文档中有 {n} 处匹配'],blockCount:['{n} of {total} entries shown','{total} 处内容中显示 {n} 处'],readerEyebrow:['CYBERSECURITY / DOCUMENT READER','网络安全 / 文档阅读'],closeReader:['Close reader','关闭阅读器'],readerNote:['Readable web edition with a Chinese translation. The Word downloads are the unchanged originals.','网页阅读版提供中文翻译；下载的 Word 文件均为未经改动的原文件。'],documentSearch:['Search this document','搜索本文档'],documentPlaceholder:['Try firewall, 权限, or Lab 19A','试试防火墙、SSH 或 19A'],lab:['Lab','实验'],contents:['Contents and commands','内容与命令'],noLabResults:['No matching lab entries. Try another keyword.','没有匹配的实验条目，请换一个关键词。'],closeArtwork:['Close artwork','关闭作品'],open:['Visit resource ↗','访问资源 ↗'],read:['Read online ↗','在线阅读 ↗'],viewArt:['View artwork','查看画作'],empty:['Nothing published here yet. This space is ready for future additions.','这里还没有发布内容，后续资源将在此展示。'],resourceCount:['{n} resource(s)','{n} 个资源'],labCount:['{n} of {total} lab entries','{total} 个实验条目中显示 {n} 个'],matches:['{n} matching lab entries inside this document','本文档中有 {n} 个匹配的实验条目'],viewLab:['View Lab {id}','查看实验 {id}'],loadError:['The library could not load. Please refresh to retry.','资源库暂时无法加载，请刷新重试。'],audioError:['This audio file could not be played. Please try another file.','此音频无法播放，请尝试其他文件。'],listening:['Now selected: {name}','当前曲目：{name}'],document:['DOCUMENT / DOCX','文档 / DOCX'],link:['EXTERNAL RESOURCE','外部资源'],artwork:['ARTWORK','艺术画作']};
 const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
 let lang='en';try{if(localStorage.getItem('jinzhou-language')==='zh')lang='zh';}catch{}
 const t=(key,vars={})=>(strings[key]?.[lang==='zh'?1:0]??key).replace(/\{(\w+)\}/g,(_,k)=>vars[k]??'');
 const localized=v=>typeof v==='string'?v:(v?.[lang]||v?.en||'');
 const categories=['videos','cybersecurity','code','gallery','journal'];
 const icons={videos:'↗',cybersecurity:'⌘',code:'⌥',gallery:'◈',journal:'✎'};
-let resources=[],doc=null,category='all',loaded=false,failed=false,art=null;
+let resources=[],docs={},doc=null,category='all',loaded=false,failed=false,art=null;
 const node=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
 const safeURL=value=>{try{const u=new URL(value,location.href);return (u.protocol==='https:'||(u.origin===location.origin&&u.protocol==='http:'))?u.href:null;}catch{return null;}};
 const normalize=value=>String(value).normalize('NFKC').toLowerCase().replace(/lab\s+(\d)/g,'$1').replace(/实验\s*(\d)/g,'$1');
 const match=(hay,query)=>normalize(query).trim().split(/\s+/).filter(Boolean).every(token=>normalize(hay).includes(token));
-const rowMatches=q=>doc?.rows.filter(r=>match(r.id+' '+r.en+' '+r.zh,q))||[];
-const resourceText=r=>JSON.stringify(r)+' '+strings[r.category].join(' ')+' '+(r.type==='document'&&doc?JSON.stringify(doc):'');
-function link(label,url,cls='secondary',download=false){const a=node('a',cls,label);const href=safeURL(url);if(href)a.href=href;if(download)a.download='CYB115_Lab_Index (1).docx';else if(href&&new URL(href).origin!==location.origin){a.target='_blank';a.rel='noopener noreferrer';}return a;}
+const docBlockText=block=>block.type==='img'?((block.alt?.en||'')+' '+(block.alt?.zh||'')+' '+String(block.src||'')):((block.en||'')+' '+(block.zh||''));
+const sectionText=section=>[section.id,section.title?.en,section.title?.zh,...(section.blocks||[]).map(docBlockText)].filter(Boolean).join(' ');
+const docMatches=(target,query)=>{
+  if(!target||!String(query||'').trim())return [];
+  return target.rows
+    ?target.rows.filter(row=>match(row.id+' '+row.en+' '+row.zh,query)).map(row=>row.id)
+    :(target.sections||[]).filter(section=>match(sectionText(section),query)).map(section=>section.id);
+};
+const rowMatches=query=>docMatches(doc,query);
+const resourceText=r=>JSON.stringify(r)+' '+strings[r.category].join(' ')+' '+(r.type==='document'&&docs[r.id]?JSON.stringify(docs[r.id]):'');
+function link(label,url,cls='secondary',download=false){const a=node('a',cls,label);const href=safeURL(url);if(href)a.href=href;if(download)a.download=href?href.split('/').pop():'';else if(href&&new URL(href).origin!==location.origin){a.target='_blank';a.rel='noopener noreferrer';}return a;}
 function button(label,fn,cls='secondary'){const b=node('button',cls,label);b.type='button';b.addEventListener('click',fn);return b;}
 function renderResources(){if(!loaded)return;const q=$('#library-search').value.trim();const matched=resources.filter(r=>(category==='all'||r.category===category)&&match(resourceText(r),q));$('#search-status').textContent=t('resourceCount',{n:matched.length});$('#empty-search').hidden=matched.length>0||(!q&&category==='all');
 const filters=$('#category-filters');filters.replaceChildren();for(const c of ['all',...categories]){const b=button(t(c),()=>{category=c;renderResources();},'');b.setAttribute('aria-pressed',String(category===c));filters.append(b);}
-const sections=$('#resource-sections');sections.replaceChildren();for(const [i,c] of categories.entries()){const items=matched.filter(r=>r.category===c);if((category!=='all'&&category!==c)||(q&&!items.length))continue;const section=node('section','resource-section');section.id=c;const head=node('div','section-heading');head.append(node('span','section-number',`0${i+1}`),node('h3','',t(c)),node('span','section-count',String(items.length).padStart(2,'0')));section.append(head);if(!items.length){const empty=node('div','empty-category');empty.append(node('span','',icons[c]),node('p','',t('empty')));section.append(empty);}else{const grid=node('div','resource-grid');for(const r of items){const card=node('article','resource-card');card.dataset.resource=r.id;card.append(node('span','card-kicker',t(r.type)),node('h4','',localized(r.title)),node('p','',localized(r.description)));const tags=node('div','tags');for(const tag of (r.tags?.[lang]||r.tags?.en||[]).slice(0,6))tags.append(node('span','tag',tag));card.append(tags);const actions=node('div','card-actions');if(r.type==='document'){actions.append(button(t('read'),()=>openDocument(q),'primary'),link(t('download'),r.download,'secondary',true));if(q){const hits=rowMatches(q);if(hits.length){card.append(node('p','',t('matches',{n:hits.length})));const links=node('div','match-links');for(const row of hits.slice(0,3))links.append(button(t('viewLab',{id:row.id}),()=>openDocument(row.id),''));card.append(links);}}}else if(r.type==='artwork'){actions.append(button(t('viewArt'),()=>openArt(r),'primary'));}else actions.append(link(t('open'),r.url,'primary'));card.append(actions);grid.append(card);}section.append(grid);}sections.append(section);}}
-function renderDocument(){if(!doc)return;$('#reader-title').textContent=lang==='zh'?doc.introZh[0]:doc.intro[0];$('#reader-byline').textContent=lang==='zh'?doc.introZh[1]:doc.intro[1];$('#reader-intro').textContent=lang==='zh'?doc.introZh[2]:doc.intro[2];const rows=rowMatches($('#document-search').value);$('#document-count').textContent=t('labCount',{n:rows.length,total:doc.rows.length});$('#doc-no-results').hidden=rows.length>0;const tbody=$('#lab-rows');tbody.replaceChildren();for(const row of rows){const tr=node('tr');tr.dataset.lab=row.id;tr.append(node('td','',row.id),node('td','',row[lang]));tbody.append(tr);}}
-function openDocument(query=''){if(!doc)return;$('#document-search').value=query;renderDocument();$('#document-reader').showModal();$('#document-reader').scrollTop=0;$('#close-reader').focus();}
+const sections=$('#resource-sections');sections.replaceChildren();for(const [i,c] of categories.entries()){const items=matched.filter(r=>r.category===c);if((category!=='all'&&category!==c)||(q&&!items.length))continue;const section=node('section','resource-section');section.id=c;const head=node('div','section-heading');head.append(node('span','section-number',`0${i+1}`),node('h3','',t(c)),node('span','section-count',String(items.length).padStart(2,'0')));section.append(head);if(!items.length){const empty=node('div','empty-category');empty.append(node('span','',icons[c]),node('p','',t('empty')));section.append(empty);}else{const grid=node('div','resource-grid');for(const r of items){const card=node('article','resource-card');card.dataset.resource=r.id;card.append(node('span','card-kicker',t(r.type)),node('h4','',localized(r.title)),node('p','',localized(r.description)));const tags=node('div','tags');for(const tag of (r.tags?.[lang]||r.tags?.en||[]).slice(0,6))tags.append(node('span','tag',tag));card.append(tags);const actions=node('div','card-actions');if(r.type==='document'){actions.append(button(t('read'),()=>openDocument(r.id,q),'primary'),link(t('download'),r.download,'secondary',true));
+if(q){const hits=docMatches(docs[r.id],q);if(hits.length){card.append(node('p','',t(docs[r.id]?.rows?'matches':'matchesBlocks',{n:hits.length})));const links=node('div','match-links');for(const hit of hits.slice(0,3))links.append(button(t(docs[r.id]?.rows?'viewLab':'viewSection',{id:hit}),()=>openDocument(r.id,hit),''));card.append(links);}}
+}else if(r.type==='artwork'){actions.append(button(t('viewArt'),()=>openArt(r),'primary'));}else actions.append(link(t('open'),r.url,'primary'));card.append(actions);grid.append(card);}section.append(grid);}sections.append(section);}}
+function renderDocument(){
+if(!doc)return;
+const zh=lang==='zh';
+const intro=zh?doc.introZh:doc.intro;
+$('#reader-title').textContent=intro[0];
+$('#reader-byline').textContent=intro[1];
+$('#reader-intro').textContent=intro[2];
+const download=$('#reader-download');
+download.href=doc.download||'';
+download.download=doc.downloadName||'';
+download.textContent=t('download');
+const zhDownload=$('#reader-download-zh');
+zhDownload.hidden=!doc.downloadZh;
+if(doc.downloadZh){zhDownload.href=doc.downloadZh;zhDownload.download=doc.downloadZhName||'';zhDownload.textContent=t('downloadZh');}
+const query=$('#document-search').value;
+const isSections=!!doc.sections;
+document.querySelector('.lab-table').hidden=isSections;
+$('#document-sections').hidden=!isSections;
+if(isSections){renderSections(query);return;}
+const rows=query.trim()?rowMatches(query):doc.rows;
+$('#document-count').textContent=t('labCount',{n:rows.length,total:doc.rows.length});
+$('#doc-no-results').hidden=rows.length>0;
+const tbody=$('#lab-rows');
+tbody.replaceChildren();
+for(const row of rows){
+const tr=node('tr');tr.dataset.lab=row.id;tr.append(node('td','',row.id),node('td','',row[lang]));tbody.append(tr);}
+}
+function renderSections(query){
+const zh=lang==='zh';
+const wrap=$('#document-sections');
+wrap.replaceChildren();
+const q=query.trim();
+let shown=0,total=0;
+for(const section of doc.sections){
+const head=' '+section.id+' '+(section.title?.en||'')+' '+(section.title?.zh||'');
+const blocks=(section.blocks||[]).filter(block=>!q||match(head+' '+docBlockText(block),q));
+total+=(section.blocks||[]).length;
+if(q&&!blocks.length)continue;
+shown+=blocks.length;
+const article=node('section','doc-section');
+article.id='doc-'+section.id;
+const heading=node('div','doc-section-head');
+heading.append(node('span','doc-section-id',section.id),node('h3','',localized(section.title)));
+article.append(heading);
+for(const block of blocks){
+if(block.type==='img'){
+const figure=node('figure','doc-figure');
+const img=node('img');
+img.src=block.src;img.alt=localized(block.alt)||'';img.loading='lazy';img.decoding='async';
+figure.append(img);article.append(figure);}else{
+article.append(node('p','doc-paragraph',block[zh?'zh':'en']||block.en||''));}}
+wrap.append(article);}
+$('#document-count').textContent=t('blockCount',{n:shown,total});
+$('#doc-no-results').hidden=shown>0||!q;
+}
+function openDocument(id,query=''){
+if(typeof id==='string'&&docs[id])doc=docs[id];
+if(!doc)return;
+$('#document-search').value=query||'';
+renderDocument();
+$('#document-reader').showModal();
+$('#document-reader').scrollTop=0;
+const target=query?document.getElementById('doc-'+query):null;
+if(target)target.scrollIntoView({block:'start'});
+$('#close-reader').focus();
+}
 function openArt(r){art=r;$('#art-image').src=safeURL(r.image)||'';$('#art-title').textContent=localized(r.title);$('#art-image').alt=localized(r.title);$('#art-description').textContent=localized(r.description);$('#art-reader').showModal();}
 function translate(){document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.title=t('title').replace('\n',' ');$$('[data-i18n]').forEach(e=>e.textContent=t(e.dataset.i18n));$$('[data-i18n-placeholder]').forEach(e=>e.placeholder=t(e.dataset.i18nPlaceholder));$$('[data-i18n-aria]').forEach(e=>e.setAttribute('aria-label',t(e.dataset.i18nAria)));$$('.language-toggle').forEach(e=>{e.textContent=lang==='en'?'中文':'English';e.lang=lang==='en'?'zh-CN':'en';e.setAttribute('aria-label',lang==='en'?'切换为中文':'Switch to English');});document.querySelector('meta[name=description]').content=t('intro');renderResources();renderDocument();renderAudio();renderMotion();if(art){$('#art-title').textContent=localized(art.title);$('#art-image').alt=localized(art.title);$('#art-description').textContent=localized(art.description);}if(failed)$('#load-error').textContent=t('loadError');}
 $$('.language-toggle').forEach(b=>b.addEventListener('click',()=>{lang=lang==='en'?'zh':'en';try{localStorage.setItem('jinzhou-language',lang);}catch{}translate();}));
@@ -36,5 +110,29 @@ function selectTrack(i,play=false){if(!playlist.length)return;trackIndex=(i+play
 function clearAudio(){audio.pause();audio.removeAttribute('src');audio.load();playlist.forEach(x=>{if(x.local)URL.revokeObjectURL(x.src);});playlist=[];trackIndex=0;audioFailed=false;$('#local-music').value='';renderAudio();}
 $('#local-music').addEventListener('change',e=>{const files=[...e.target.files];clearAudio();playlist=files.map(f=>({title:f.name,src:URL.createObjectURL(f),local:true}));selectTrack(0);});$('#audio-clear').addEventListener('click',()=>{clearAudio();playlist=[...publicTracks];selectTrack(0);});function togglePlayback(){if(!playlist.length)return;if(audio.paused)audio.play().catch(()=>{audioFailed=true;renderAudio();});else audio.pause();}$('#audio-play').addEventListener('click',togglePlayback);$('#floating-play').addEventListener('click',togglePlayback);$('#audio-prev').addEventListener('click',()=>selectTrack(trackIndex-1,true));$('#audio-next').addEventListener('click',()=>selectTrack(trackIndex+1,true));audio.addEventListener('ended',()=>selectTrack(trackIndex+1,true));audio.addEventListener('play',renderAudio);audio.addEventListener('pause',renderAudio);audio.addEventListener('error',()=>{if(playlist.length){audioFailed=true;renderAudio();}});audio.addEventListener('loadedmetadata',()=>{$('#audio-time').textContent=time(audio.currentTime)+' / '+time(audio.duration);});audio.addEventListener('timeupdate',()=>{$('#audio-time').textContent=time(audio.currentTime)+' / '+time(audio.duration);$('#audio-seek').value=audio.duration?audio.currentTime/audio.duration*100:0;});$('#audio-seek').addEventListener('input',e=>{if(Number.isFinite(audio.duration))audio.currentTime=Number(e.target.value)/100*audio.duration;});$('#audio-volume').addEventListener('input',e=>audio.volume=Number(e.target.value));
 $('#year').textContent=new Date().getFullYear();translate();
-Promise.all([fetch('library.json?v=exams1',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('library');return r.json();}),fetch('resources/cyb115-lab-index.json').then(r=>{if(!r.ok)throw Error('document');return r.json();})]).then(([data,preview])=>{resources=data.resources;doc=preview;publicTracks=(data.tracks||[]).map(x=>({...x,src:safeURL(x.src)})).filter(x=>x.src);if(!playlist.some(x=>x.local)){playlist=[...publicTracks];selectTrack(0);}loaded=true;translate();if(location.hash==='#cyb115-lab-index')openDocument();}).catch(()=>{failed=true;$('#load-error').hidden=false;$('#load-error').textContent=t('loadError');});
+Promise.all([fetch('library.json?v=lab23',{
+cache:'no-cache'}).then(r=>{
+if(!r.ok)throw Error('library');return r.json();})]).then(async([data])=>{
+resources=data.resources;
+const previews=await Promise.all(resources.filter(r=>r.preview).map(async r=>{
+try{
+const res=await fetch(r.preview,{cache:'no-cache'});
+if(!res.ok)throw Error('preview');
+return [r.id,await res.json()];}catch{
+return [r.id,null];}}));
+for(const [id,docData] of previews){
+if(!docData)continue;
+const meta=resources.find(x=>x.id===id)||{};
+docs[id]={...docData,download:meta.download,downloadName:meta.downloadName,downloadZh:meta.downloadZh,downloadZhName:meta.downloadZhName};}
+doc=docs['cyb115-lab-index']||Object.values(docs)[0]||null;
+publicTracks=(data.tracks||[]).map(x=>({
+...x,src:safeURL(x.src)})).filter(x=>x.src);
+if(!playlist.some(x=>x.local)){
+playlist=[...publicTracks];selectTrack(0);}loaded=true;translate();
+const openFromHash=()=>{
+const hash=location.hash.replace('#','');
+if(hash&&docs[hash])openDocument(hash);};
+openFromHash();
+addEventListener('hashchange',openFromHash);}).catch(()=>{
+failed=true;$('#load-error').hidden=false;$('#load-error').textContent=t('loadError');});
 })();
