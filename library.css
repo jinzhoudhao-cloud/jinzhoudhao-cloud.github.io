@@ -30,3 +30,5 @@ button,.secondary,.primary{white-space:nowrap}.document-search button{flex-shrin
   .doc-section-head{flex-wrap:wrap;gap:8px}
   .doc-section h3{flex:1 1 100%}
 }
+
+.card-warning{color:var(--accent);font-size:12px;margin:10px 0 0;line-height:1.6}
