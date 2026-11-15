@@ -1,0 +1,711 @@
+{
+  "intro": [
+    "CYB 115 – Lab #23",
+    "Student Name: _________Jinzhou Hao_______________________",
+    "Learning how to use a bash script for the first time"
+  ],
+  "introZh": [
+    "CYB 115 – Lab #23",
+    "Student Name: _________Jinzhou Hao_______________________",
+    "第一次学习如何使用bash script"
+  ],
+  "sections": [
+    {
+      "id": "23A",
+      "title": {
+        "en": "Lab 23A: echo and running bash script",
+        "zh": "Lab 23A: echo 与运行bash script"
+      },
+      "blocks": [
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image01.webp",
+          "alt": {
+            "en": "Lab 23A terminal screenshot —",
+            "zh": "实验 23A 终端截图 ——"
+          }
+        },
+        {
+          "type": "p",
+          "en": "The bash file must be given permission to run; otherwise, it cannot run.",
+          "zh": "必须要给需要运行的bash文件权限否则无法运行"
+        },
+        {
+          "type": "p",
+          "en": "The Echo command directly displays the text inside “ ” on the screen.",
+          "zh": "Echo 命令会在屏幕上直接显示“”里的文字"
+        },
+        {
+          "type": "p",
+          "en": "But I wrote echo as each...",
+          "zh": "但是echo写成了each。。。"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image02.webp",
+          "alt": {
+            "en": "Lab 23A terminal screenshot — But I wrote echo as each...",
+            "zh": "实验 23A 终端截图 —— 但是echo写成了each。。。"
+          }
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image03.webp",
+          "alt": {
+            "en": "Lab 23A terminal screenshot — But I wrote echo as each...",
+            "zh": "实验 23A 终端截图 —— 但是echo写成了each。。。"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Obviously, it could not run.",
+          "zh": "很明显无法运行"
+        },
+        {
+          "type": "p",
+          "en": "I noticed that lab23b.sh should actually be lab23a.sh, so I renamed it and deleted lab23b.sh.",
+          "zh": "注意到lab23b.sh实际应该是lab23a.sh所以我改了名字并删除了lab23b.sh"
+        },
+        {
+          "type": "p",
+          "en": "Cp lab23b.sh lab23a.sh",
+          "zh": "Cp lab23b.sh lab23a.sh"
+        },
+        {
+          "type": "p",
+          "en": "Use ./lab23a.sh to run the bash Script",
+          "zh": "使用./lab23a.sh运行bash Script"
+        },
+        {
+          "type": "p",
+          "en": "After changing it to echo “xxxx”, it could run, and Hello World! My First Bash Script. was displayed on the screen. But the text formatting did not line up. Needs further investigation!",
+          "zh": "改成echo “xxxx”后就可以运行了 在屏幕上显示了 Hello World! My First Bash Script. 但是文字的格式并不能对齐。有待研究！"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image04.webp",
+          "alt": {
+            "en": "Lab 23A terminal screenshot — After changing it to echo “xxxx”, it could run, and Hello World! My Fi",
+            "zh": "实验 23A 终端截图 —— 改成echo “xxxx”后就可以运行了 在屏幕上显示了 Hello World"
+          }
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image05.webp",
+          "alt": {
+            "en": "Lab 23A terminal screenshot — After changing it to echo “xxxx”, it could run, and Hello World! My Fi",
+            "zh": "实验 23A 终端截图 —— 改成echo “xxxx”后就可以运行了 在屏幕上显示了 Hello World"
+          }
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image06.webp",
+          "alt": {
+            "en": "Lab 23A terminal screenshot — After changing it to echo “xxxx”, it could run, and Hello World! My Fi",
+            "zh": "实验 23A 终端截图 —— 改成echo “xxxx”后就可以运行了 在屏幕上显示了 Hello World"
+          }
+        }
+      ]
+    },
+    {
+      "id": "23B",
+      "title": {
+        "en": "Lab 23B: class=CYB115",
+        "zh": "Lab 23B: class=CYB115"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Set a Variable class=CYB115 Note that no spaces were used in this command line",
+          "zh": "Set a Variable class=CYB115 注意没有空格被使用在这一行命令"
+        },
+        {
+          "type": "p",
+          "en": "Use $class to represent CYB115. This way, when running it, you can see This is CYB115. Since class was assigned CYB115, what appears is not class but CYB115.",
+          "zh": "以$class 代表CYB115这样在运行时就可以看到 This is CYB115 因为class 被赋值成了CYB115所以看到的就不是class 而是CYB115"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image07.webp",
+          "alt": {
+            "en": "Lab 23B terminal screenshot — Use $class to represent CYB115. This way, when running it, you can see",
+            "zh": "实验 23B 终端截图 —— 以$class 代表CYB115这样在运行时就可以看到 This is CYB1"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Here I forgot to give permission, so bash could not run.",
+          "zh": "这里忘了给权限所以bash无法运行"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image08.webp",
+          "alt": {
+            "en": "Lab 23B terminal screenshot — Here I forgot to give permission, so bash could not run.",
+            "zh": "实验 23B 终端截图 —— 这里忘了给权限所以bash无法运行"
+          }
+        },
+        {
+          "type": "p",
+          "en": "After giving permission, it could run, but line2 had a problem: command not found. I guessed there was an error in the command.",
+          "zh": "给了权限后可以运行但是显示line2出现了问题 command not found.我猜测是命令出现了错误"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image09.webp",
+          "alt": {
+            "en": "Lab 23B terminal screenshot — After giving permission, it could run, but line2 had a problem: comman",
+            "zh": "实验 23B 终端截图 —— 给了权限后可以运行但是显示line2出现了问题 command not foun"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Here I added the Interpreter Line $!/bin/bash that was taught in class",
+          "zh": "这里我加入了课上讲的Interpreter Line $!/bin/bash"
+        },
+        {
+          "type": "p",
+          "en": "Its purpose is to tell Linux that this script should be executed using the Bash interpreter.",
+          "zh": "他的目的是告诉 Linux 这个脚本应该使用 Bash 解释器执行。"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image10.webp",
+          "alt": {
+            "en": "Lab 23B terminal screenshot — Its purpose is to tell Linux that this script should be executed using",
+            "zh": "实验 23B 终端截图 —— 他的目的是告诉 Linux 这个脚本应该使用 Bash 解释器执行。"
+          }
+        },
+        {
+          "type": "p",
+          "en": "But it still could not run.",
+          "zh": "但是还是无法运行"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image11.webp",
+          "alt": {
+            "en": "Lab 23B terminal screenshot — But it still could not run.",
+            "zh": "实验 23B 终端截图 —— 但是还是无法运行"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Then, after reviewing the code again, I found that a space was missing after echo.",
+          "zh": "于是重新审视代码后发现 缺少了空格在echo 后面"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image12.webp",
+          "alt": {
+            "en": "Lab 23B terminal screenshot — Then, after reviewing the code again, I found that a space was missing",
+            "zh": "实验 23B 终端截图 —— 于是重新审视代码后发现 缺少了空格在echo 后面"
+          }
+        },
+        {
+          "type": "p",
+          "en": "SPEACE !!",
+          "zh": "SPEACE !!"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image13.webp",
+          "alt": {
+            "en": "Lab 23B terminal screenshot — SPEACE !!",
+            "zh": "实验 23B 终端截图 —— SPEACE !!"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Then it could run.",
+          "zh": "然后可以运行了"
+        }
+      ]
+    },
+    {
+      "id": "23C",
+      "title": {
+        "en": "Lab 23C:  read XXX → $XXX Read user input and store it in a variable",
+        "zh": "Lab 23C:  read XXX → $XXX 读取用户输入并储存在变量中"
+      },
+      "blocks": [
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image14.webp",
+          "alt": {
+            "en": "Lab 23C terminal screenshot —",
+            "zh": "实验 23C 终端截图 ——"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Use nano to create and edit lab23c.sh",
+          "zh": "使用nano创建编辑lab23c.sh"
+        },
+        {
+          "type": "p",
+          "en": "Read IPAddress (read input)",
+          "zh": "Read IPAddress (读取输入）"
+        },
+        {
+          "type": "p",
+          "en": "$IPAddress(display the stored variable)",
+          "zh": "$IPAddress(显示储存的变量）"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image15.webp",
+          "alt": {
+            "en": "Lab 23C terminal screenshot — $IPAddress(display the stored variable)",
+            "zh": "实验 23C 终端截图 —— $IPAddress(显示储存的变量）"
+          }
+        },
+        {
+          "type": "p",
+          "en": "I gave it permission no need to go into more detail.",
+          "zh": "赋予权限不做过多赘述"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image16.webp",
+          "alt": {
+            "en": "Lab 23C terminal screenshot — I gave it permission no need to go into more detail.",
+            "zh": "实验 23C 终端截图 —— 赋予权限不做过多赘述"
+          }
+        },
+        {
+          "type": "p",
+          "en": "The result is shown below.",
+          "zh": "运行结果为下"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image17.webp",
+          "alt": {
+            "en": "Lab 23C terminal screenshot — The result is shown below.",
+            "zh": "实验 23C 终端截图 —— 运行结果为下"
+          }
+        }
+      ]
+    },
+    {
+      "id": "23D",
+      "title": {
+        "en": "Lab 23D: Filters and Channels (Pipe Filtering) grep ”xx” file.xx | grep “”",
+        "zh": "Lab 23D: 滤镜与通道（管道筛选）grep ”xx” file.xx | grep “”"
+      },
+      "blocks": [
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image18.webp",
+          "alt": {
+            "en": "Lab 23D terminal screenshot —",
+            "zh": "实验 23D 终端截图 ——"
+          }
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image19.webp",
+          "alt": {
+            "en": "Lab 23D terminal screenshot —",
+            "zh": "实验 23D 终端截图 ——"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Necessary setup 👆",
+          "zh": "必要的设置👆"
+        },
+        {
+          "type": "p",
+          "en": "Here I forgot to use | to set up grep. After running it, I got all the log lines containing admin and 203.0.113.45.",
+          "zh": "这里我忘了使用 | 来设置grep 运行后得到了所有包含admin 和203.0.113.45的log行"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image20.webp",
+          "alt": {
+            "en": "Lab 23D terminal screenshot — Here I forgot to use | to set up grep. After running it, I got all the",
+            "zh": "实验 23D 终端截图 —— 这里我忘了使用 | 来设置grep 运行后得到了所有包含admin 和203.0"
+          }
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image21.webp",
+          "alt": {
+            "en": "Lab 23D terminal screenshot — Here I forgot to use | to set up grep. After running it, I got all the",
+            "zh": "实验 23D 终端截图 —— 这里我忘了使用 | 来设置grep 运行后得到了所有包含admin 和203.0"
+          }
+        },
+        {
+          "type": "p",
+          "en": "After adding the filter, first filter admin, then filter the specified ipaddress from the admin results.",
+          "zh": "加入滤网后 先筛选admin 然后在admin的基础上筛选特定ipaddress"
+        },
+        {
+          "type": "p",
+          "en": "👇 There was an error in this setup. The first grep filtered auth23.log, but the second grep filtered auth23.log again, causing all the logs containing admin and 203.0.113.45 to appear below again.",
+          "zh": "👇这里的设置出现了错误 第一个grep里再auth23.log里筛选 但是第二个grep又在auth23.log里筛选了一次造成下面又显示了所有包含admin 和203.0.113.45的log"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image22.webp",
+          "alt": {
+            "en": "Lab 23D terminal screenshot — 👇 There was an error in this setup. The first grep filtered auth23.log",
+            "zh": "实验 23D 终端截图 —— 👇这里的设置出现了错误 第一个grep里再auth23.log里筛选 但是第二个"
+          }
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image23.webp",
+          "alt": {
+            "en": "Lab 23D terminal screenshot — 👇 There was an error in this setup. The first grep filtered auth23.log",
+            "zh": "实验 23D 终端截图 —— 👇这里的设置出现了错误 第一个grep里再auth23.log里筛选 但是第二个"
+          }
+        },
+        {
+          "type": "p",
+          "en": "The correct filter should be as follows 👇",
+          "zh": "正确的滤网应该如下👇"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image24.webp",
+          "alt": {
+            "en": "Lab 23D terminal screenshot — The correct filter should be as follows 👇",
+            "zh": "实验 23D 终端截图 —— 正确的滤网应该如下👇"
+          }
+        }
+      ]
+    },
+    {
+      "id": "23E",
+      "title": {
+        "en": "Lab 23E: Make a backup",
+        "zh": "Lab 23E: 做一个backup"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Create a backup directory",
+          "zh": "创建一个backup directory"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image25.webp",
+          "alt": {
+            "en": "Lab 23E terminal screenshot — Create a backup directory",
+            "zh": "实验 23E 终端截图 —— 创建一个backup directory"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Directly copy the previous bash, so there is no need to give permission every time.",
+          "zh": "直接copy 上一个bash, 就不需要每次都给权限了"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image26.webp",
+          "alt": {
+            "en": "Lab 23E terminal screenshot — Directly copy the previous bash, so there is no need to give permissio",
+            "zh": "实验 23E 终端截图 —— 直接copy 上一个bash, 就不需要每次都给权限了"
+          }
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image27.webp",
+          "alt": {
+            "en": "Lab 23E terminal screenshot — Directly copy the previous bash, so there is no need to give permissio",
+            "zh": "实验 23E 终端截图 —— 直接copy 上一个bash, 就不需要每次都给权限了"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Choose a file syslog.1",
+          "zh": "选择一个文件 syslog.1"
+        },
+        {
+          "type": "p",
+          "en": "Then directly enter the normal cp command  cp source destination",
+          "zh": "然后直接输入正常的cp命令  cp source destination"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image28.webp",
+          "alt": {
+            "en": "Lab 23E terminal screenshot — Then directly enter the normal cp command  cp source destination",
+            "zh": "实验 23E 终端截图 —— 然后直接输入正常的cp命令  cp source destination"
+          }
+        },
+        {
+          "type": "p",
+          "en": "It worked 👇",
+          "zh": "成功了👇"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image29.webp",
+          "alt": {
+            "en": "Lab 23E terminal screenshot — It worked 👇",
+            "zh": "实验 23E 终端截图 —— 成功了👇"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Then I wondered whether I could make this bash more user-friendly, so I added the ls command. After running it, it could display the files in backup.",
+          "zh": "然后我想是否可以让这个bash更人性化 于是我加入了ls 命令 运行后可以显示backup里的文件"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image30.webp",
+          "alt": {
+            "en": "Lab 23E terminal screenshot — Then I wondered whether I could make this bash more user-friendly, so",
+            "zh": "实验 23E 终端截图 —— 然后我想是否可以让这个bash更人性化 于是我加入了ls 命令 运行后可以显示b"
+          }
+        },
+        {
+          "type": "p",
+          "en": "I got the path wrong several times.",
+          "zh": "路径搞错了好几次"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image31.webp",
+          "alt": {
+            "en": "Lab 23E terminal screenshot — I got the path wrong several times.",
+            "zh": "实验 23E 终端截图 —— 路径搞错了好几次"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Finally got it right ✔👇",
+          "zh": "终于对了✔👇"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image32.webp",
+          "alt": {
+            "en": "Lab 23E terminal screenshot — Finally got it right ✔👇",
+            "zh": "实验 23E 终端截图 —— 终于对了✔👇"
+          }
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image33.webp",
+          "alt": {
+            "en": "Lab 23E terminal screenshot — Finally got it right ✔👇",
+            "zh": "实验 23E 终端截图 —— 终于对了✔👇"
+          }
+        },
+        {
+          "type": "p",
+          "en": "When I was at home, I wondered whether I could make it back up any file in the /var/log folder after entering a filename. So I wrote the following commands. Since my computer does not have a virtual machine, I have not run them to verify them yet.",
+          "zh": "在家的时候我在想是否可以做成输入文件名后给任意的/var/log文件夹下的文件做backup。所以我写了以下命令，因为我的电脑没有虚拟机所以还没运行验证"
+        },
+        {
+          "type": "p",
+          "en": "But I felt something was strange about $Filename_bk. It seemed to treat $Filename_bk as one variable. How can I make the variable refer to $Filename and then add _bk to the end of this filename?",
+          "zh": "但是我感觉$Filename_bk那里怪怪的 他好像把$Filename_bk都算作一个变量了怎么让变量指定为$Filename然后在此文件的后缀加入_bk呢？"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image34.webp",
+          "alt": {
+            "en": "Lab 23E terminal screenshot — But I felt something was strange about $Filename_bk. It seemed to trea",
+            "zh": "实验 23E 终端截图 —— 但是我感觉$Filename_bk那里怪怪的 他好像把$Filename_bk都"
+          }
+        }
+      ]
+    },
+    {
+      "id": "23F",
+      "title": {
+        "en": "Lab 23F: Filtering and Counting grep  |  awk",
+        "zh": "Lab 23F: 筛选并计数 grep  |  awk"
+      },
+      "blocks": [
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image35.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot —",
+            "zh": "实验 23F 终端截图 ——"
+          }
+        },
+        {
+          "type": "p",
+          "en": "cp👆",
+          "zh": "cp👆"
+        },
+        {
+          "type": "p",
+          "en": "I first wrote a part to read a variable, then copied the awk command from lab22 directly here and modified it.",
+          "zh": "我先写了个读取变量然后把lab22的awk命令直接复制到这里了然后再在这上面修改"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image36.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — I first wrote a part to read a variable, then copied the awk command f",
+            "zh": "实验 23F 终端截图 —— 我先写了个读取变量然后把lab22的awk命令直接复制到这里了然后再在这上面修改"
+          }
+        },
+        {
+          "type": "p",
+          "en": "I ran this directly. Obviously, it did not work.",
+          "zh": "我直接运行了这个，显然行不通"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image37.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — I ran this directly. Obviously, it did not work.",
+            "zh": "实验 23F 终端截图 —— 我直接运行了这个，显然行不通"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Then I went back and modified it a little. The echo command here is a bit strange. I am not really sure what I was thinking at the time.",
+          "zh": "然后我回去修改了一下，这里的echo命令有点奇怪。我不是太知道当时是怎么想的"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image38.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — Then I went back and modified it a little. The echo command here is a",
+            "zh": "实验 23F 终端截图 —— 然后我回去修改了一下，这里的echo命令有点奇怪。我不是太知道当时是怎么想的"
+          }
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image39.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — Then I went back and modified it a little. The echo command here is a",
+            "zh": "实验 23F 终端截图 —— 然后我回去修改了一下，这里的echo命令有点奇怪。我不是太知道当时是怎么想的"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Obviously, it could not run.",
+          "zh": "很显然无法运行"
+        },
+        {
+          "type": "p",
+          "en": "Here I wanted to make a filter and then use a pipe to display the ninth character. If it worked, I would move on to the next step.",
+          "zh": "这里我想的是做一个过滤然后通过管道来显示第九个字符，如果成功的话再进入下一步骤"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image40.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — Here I wanted to make a filter and then use a pipe to display the nint",
+            "zh": "实验 23F 终端截图 —— 这里我想的是做一个过滤然后通过管道来显示第九个字符，如果成功的话再进入下一步骤"
+          }
+        },
+        {
+          "type": "p",
+          "en": "Obviously, it did not succeed. I did not take a screenshot at the time, but it showed an error at the awk position.",
+          "zh": "显然没成功然后我当时没截图但是当时是显示awk位置的错误"
+        },
+        {
+          "type": "p",
+          "en": "Then I thought I should do it step by step, starting with grep.",
+          "zh": "然后我想先一步一步做 先做grep"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image41.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — Then I thought I should do it step by step, starting with grep.",
+            "zh": "实验 23F 终端截图 —— 然后我想先一步一步做 先做grep"
+          }
+        },
+        {
+          "type": "p",
+          "en": "This succeeded, and then I worked on the pipe afterward.",
+          "zh": "这个是成功的然后我在做后面的管道"
+        },
+        {
+          "type": "p",
+          "en": "Here I directly counted the number of Failed entries passed through the pipe, then printed $username Failed attempts: xx",
+          "zh": "这里我直接计数通过管道的Failed的数量 然后print $username Failed attempts：xx"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image42.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — Here I directly counted the number of Failed entries passed through th",
+            "zh": "实验 23F 终端截图 —— 这里我直接计数通过管道的Failed的数量 然后print $username"
+          }
+        },
+        {
+          "type": "p",
+          "en": "It ran successfully, but username was displayed directly without changing the variable.",
+          "zh": "运行成功了但是username直接显示出来了没有改变变量"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image43.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — It ran successfully, but username was displayed directly without chang",
+            "zh": "实验 23F 终端截图 —— 运行成功了但是username直接显示出来了没有改变变量"
+          }
+        },
+        {
+          "type": "p",
+          "en": "I added ‘ ’ around $username here, and it could be recognized.",
+          "zh": "我在$username这里加入了‘’ 可以被识别了"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image44.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — I added ‘ ’ around $username here, and it could be recognized.",
+            "zh": "实验 23F 终端截图 —— 我在$username这里加入了‘’ 可以被识别了"
+          }
+        },
+        {
+          "type": "p",
+          "en": "HA!",
+          "zh": "HA!"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image45.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — HA!",
+            "zh": "实验 23F 终端截图 —— HA!"
+          }
+        },
+        {
+          "type": "p",
+          "en": "It ran successfully.",
+          "zh": "运行成功"
+        },
+        {
+          "type": "p",
+          "en": "BUT!",
+          "zh": "BUT!"
+        },
+        {
+          "type": "p",
+          "en": "After editing it again at home, I found that, just like the earlier mistake, there was an extra auth23.log after awk. Bringing in this file caused the awk command to scan auth.log again, so the output count was the total count in the file, not the count from the preceding pipe. So I changed it at home.",
+          "zh": "在回家后重新编辑的时候我发现awk后面和上面的错误一样多了auth23.log文件的拉取回导致awk命令会再次扫描auth.log 导致输出的数量是文件的总共数量而不是前面通过管道的数量所以在家我更改了一下"
+        },
+        {
+          "type": "p",
+          "en": "It should run normally.",
+          "zh": "应该可以正常运行"
+        },
+        {
+          "type": "img",
+          "src": "resources/cyb115-lab23/image46.webp",
+          "alt": {
+            "en": "Lab 23F terminal screenshot — It should run normally.",
+            "zh": "实验 23F 终端截图 —— 应该可以正常运行"
+          }
+        }
+      ]
+    }
+  ]
+}
