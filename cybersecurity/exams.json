@@ -38,17 +38,17 @@
     {
       "id": "cyb125-ch11-13-15",
       "title": {
-        "en": "CYB125 Chapters 11, 13 & 15 Review",
-        "zh": "CYB125 第 11、13、15 章考试复习"
+        "en": "CYB125 Chapters 11, 12, 13 & 15 Review",
+        "zh": "CYB125 第 11、12、13、15 章考试复习"
       },
       "description": {
-        "en": "Review Chapters 11, 13 and 15 with bilingual questions, shuffled multiple-choice answers and mistake review.",
-        "zh": "复习第 11、13、15 章，支持中英双语题目、选择题选项随机排序和错题复习。"
+        "en": "Review Chapters 11, 12, 13 and 15 with bilingual questions, shuffled multiple-choice answers and mistake review.",
+        "zh": "复习第 11、12、13、15 章，支持中英双语题目、选择题选项随机排序和错题复习。"
       },
-      "questions": 60,
-      "units": 6,
-      "multipleChoice": 30,
-      "trueFalse": 30,
+      "questions": 79,
+      "units": 8,
+      "multipleChoice": 40,
+      "trueFalse": 39,
       "practiceUrl": "https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site/practice?bank=cyb125-ch11-13-15",
       "libraryUrl": "https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site/welcome#cyb125-card"
     }
