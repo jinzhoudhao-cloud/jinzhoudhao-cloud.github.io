@@ -45,10 +45,10 @@
         "en": "Review Chapters 11, 12, 13 and 15 with bilingual questions, shuffled multiple-choice answers and mistake review.",
         "zh": "复习第 11、12、13、15 章，支持中英双语题目、选择题选项随机排序和错题复习。"
       },
-      "questions": 79,
+      "questions": 80,
       "units": 8,
       "multipleChoice": 40,
-      "trueFalse": 39,
+      "trueFalse": 40,
       "practiceUrl": "https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site/practice?bank=cyb125-ch11-13-15",
       "libraryUrl": "https://cyb-study-studio-hao-6-9.jzhou6.chatgpt.site/welcome#cyb125-card"
     }
