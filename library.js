@@ -14,18 +14,23 @@ let resources=[],docs={},doc=null,category='all',loaded=false,failed=false,art=n
 const missingDocs=new Set();
 const node=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
 const safeURL=value=>{try{const u=new URL(value,location.href);return (u.protocol==='https:'||(u.origin===location.origin&&u.protocol==='http:'))?u.href:null;}catch{return null;}};
-const normalize=value=>String(value).normalize('NFKC').toLowerCase().replace(/lab\s+(\d)/g,'$1').replace(/实验\s*(\d)/g,'$1');
+const normalize=value=>String(value).normalize('NFKC').toLowerCase().replace(/\blab\s*(\d)/g,'$1').replace(/实验\s*(\d)/g,'$1');
 const match=(hay,query)=>normalize(query).trim().split(/\s+/).filter(Boolean).every(token=>normalize(hay).includes(token));
 const docBlockText=block=>block.type==='img'?((block.alt?.en||'')+' '+(block.alt?.zh||'')+' '+String(block.src||'')):((block.en||'')+' '+(block.zh||''));
 const sectionText=section=>[section.id,section.title?.en,section.title?.zh,...(section.blocks||[]).map(docBlockText)].filter(Boolean).join(' ');
 const docMatches=(target,query)=>{
   if(!target||!String(query||'').trim())return [];
   return target.rows
-    ?target.rows.filter(row=>match(row.id+' '+row.en+' '+row.zh,query)).map(row=>row.id)
+    ?matchingRows(target.rows,query).map(row=>row.id)
     :(target.sections||[]).filter(section=>match(sectionText(section),query)).map(section=>section.id);
 };
-const rowMatches=query=>docMatches(doc,query);
-const resourceText=r=>JSON.stringify(r)+' '+strings[r.category].join(' ')+' '+(r.type==='document'&&docs[r.id]?JSON.stringify(docs[r.id]):'');
+const matchingRows=(rows,query)=>rows.filter(row=>match(row.id+' '+row.en+' '+row.zh,query));
+function searchableText(value){
+  if(typeof value==='string')return value;
+  if(value&&typeof value==='object')return Object.values(value).map(searchableText).join(' ');
+  return '';
+}
+const resourceText=r=>[searchableText(r),...strings[r.category],searchableText(docs[r.id])].join(' ');
 function link(label,url,cls='secondary',download=false){const a=node('a',cls,label);const href=safeURL(url);if(href)a.href=href;if(download)a.download=href?href.split('/').pop():'';else if(href&&new URL(href).origin!==location.origin){a.target='_blank';a.rel='noopener noreferrer';}return a;}
 function button(label,fn,cls='secondary'){const b=node('button',cls,label);b.type='button';b.addEventListener('click',fn);return b;}
 function renderResources(){if(!loaded)return;const q=$('#library-search').value.trim();const matched=resources.filter(r=>(category==='all'||r.category===category)&&match(resourceText(r),q));$('#search-status').textContent=t('resourceCount',{n:matched.length});$('#empty-search').hidden=matched.length>0||(!q&&category==='all');
@@ -52,7 +57,7 @@ const isSections=!!doc.sections;
 document.querySelector('.lab-table').hidden=isSections;
 $('#document-sections').hidden=!isSections;
 if(isSections){renderSections(query);return;}
-const rows=query.trim()?rowMatches(query):doc.rows;
+const rows=query.trim()?matchingRows(doc.rows,query):doc.rows;
 $('#document-count').textContent=t('labCount',{n:rows.length,total:doc.rows.length});
 $('#doc-no-results').hidden=rows.length>0;
 const tbody=$('#lab-rows');
